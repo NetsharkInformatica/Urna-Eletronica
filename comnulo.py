@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS votos (
 candidatos = {
     '12': {'nome': 'Candidato 1', 'foto': './fotos/candidato1.png'},
     '34': {'nome': 'Candidato 2', 'foto': './fotos/candidato2.png'},
-    '56': {'nome': 'Candidato 3', 'foto': './fotos/candidato3.png'},
+    '57': {'nome': 'Candidato 3', 'foto': './fotos/candidato3.png'},
     '77': {'nome': 'Candidato 4', 'foto': './fotos/candidato4.png'},
     '00': {'nome': 'Voto em Branco', 'foto': None}
 }
@@ -168,17 +168,17 @@ def criar_teclado():
         btn.grid(row=row, column=col, padx=5, pady=5)
 
     # Botões de controle (Corrige, Branco, Confirma, Nulo) com as mesmas cores
-    btn_corrige = tk.Button(frame_teclado, text="CORRIGE", font=("Arial", 15), bg="orange", width=10, height=2, command=limpar_tela)
+    btn_corrige = tk.Button(frame_teclado, text="CORRIGE", font=("Arial", 12), bg="orange", width=10, height=2, command=limpar_tela)
     btn_corrige.grid(row=4, column=0)
 
-    btn_branco = tk.Button(frame_teclado, text="BRANCO", font=("Arial", 15), bg="white", width=10, height=2, command=votar_branco)
+    btn_branco = tk.Button(frame_teclado, text="BRANCO", font=("Arial", 12), bg="white", width=10, height=2, command=votar_branco)
     btn_branco.grid(row=4, column=1)
 
-    btn_nulo = tk.Button(frame_teclado, text="NULO", font=("Arial", 15), bg="red", width=10, height=2, command=votar_nulo)
-    btn_nulo.grid(row=4, column=2)
+   # btn_nulo = tk.Button(frame_teclado, text="NULO", font=("Arial", 15), bg="red", width=10, height=2, command=votar_nulo)
+    #btn_nulo.grid(row=4, column=2)
 
-    btn_confirma = tk.Button(frame_teclado, text="CONFIRMA", font=("Arial", 15), bg="green", width=10, height=2, command=confirmar_voto)
-    btn_confirma.grid(row=5, column=0, columnspan=3)  # Colocando o botão de confirmação abaixo
+    btn_confirma = tk.Button(frame_teclado, text="CONFIRMA", font=("Arial", 12), bg="green", width=10, height=2, command=confirmar_voto)
+    btn_confirma.grid(row=4, column=2, columnspan=3)  # Colocando o botão de confirmação abaixo
 
 # Botão para exibir resultados
 btn_resultados = tk.Button(root, text="Exibir Resultados", font=("Arial", 15), command=exibir_resultados)
